@@ -56,14 +56,14 @@ document.write("Your Clicks: " + visits)
 </script>
   
 <script type="text/javascript">
-            var attime = “1111”;
+            var attime
             function clock() {
-                var time = new Date();
+                var time = new Date()
                 attime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + "--" + time.toLocaleString();
-                document.getElementById("clock").value = attime;
+                document.getElementById("clock").value = attime
             }
 
-            setInterval(clock,1000);
+            setInterval(clock,1000)
   document.write("Current time: " + attime)
   document.write("<span id='clock'></span>")
 </script>
