@@ -61,10 +61,12 @@ document.write("Your Clicks: " + visits)
             function clock() {
                 var time = new Date();
                 attime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + "--" + time.toLocaleString();
+                document.getElementById("clock").value = attime;
             }
 
             setInterval(clock,1000);
   document.write("Current time: " + attime)
+  document.write("<span id='clock'></span>")
 </script>
   
 <noscript>Sorry, your browser does not support JavaScript!</noscript>
