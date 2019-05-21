@@ -55,6 +55,18 @@ setCookie("counter", visits, now)
 document.write("Your Clicks: " + visits)
 // -->
 </script>
+  
+<script type="text/javascript">
+            var attime;
+            function clock() {
+                var time = new Date();
+                attime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + "--" + time.toLocaleString();
+            }
+
+            setInterval(clock,1000);
+  document.write("Current time: " + attime)
+</script>
+  
 <noscript>Sorry, your browser does not support JavaScript!</noscript>
   
 <body bgcolor="sky blue">
