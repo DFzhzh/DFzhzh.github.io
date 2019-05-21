@@ -60,12 +60,12 @@ document.write("Your Clicks: " + visits)
             function clock() {
                 var time = new Date()
                 attime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + "--" + time.toLocaleString();
-                document.getElementById("clock").value = attime
+                document.getElementById("time").value = attime
             }
 
             setInterval(clock,1000)
   document.write("Current time: " + attime)
-  document.write("<span id='clock'></span>")
+  document.write("<span id='time'></span>")
 </script>
   
 </head>
