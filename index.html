@@ -55,7 +55,7 @@ document.write("Your Clicks: " + visits)
 // -->
 </script>
   
-<script type="text/javascript">
+<!--<script type="text/javascript">
             var attime
             function clock() {
                 var time = new Date()
@@ -66,7 +66,7 @@ document.write("Your Clicks: " + visits)
             setInterval(clock,1000)
   document.write("Current time: " + attime)
   document.write("<span id='time'></span>")
-</script>
+</script>-->
   
 </head>
 
@@ -75,11 +75,11 @@ document.write("Your Clicks: " + visits)
   
 <body bgcolor="sky blue">
 <script type="text/javascript" color="255,0,0" src="//zhangzhuang.fun/script/canvas-nest.min.js"></script>
-<div id="datetime"  align="right">
+<div>Current time: <div id="datetime"  align="right">
     <script>
         setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
     </script>
-</div>
+</div></div>
 <!--这是一段注释。注释不会在浏览器中显示。-->
 <h2 align="center" style="font-family:verdana;color:red;text-align:center">Welcome to My Secret Garden</h2>
 <a href="/html/private.html">
