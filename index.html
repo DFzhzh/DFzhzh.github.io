@@ -82,9 +82,15 @@ document.write("Your Clicks: " + visits)
 </a></div>
 <!--这是一段注释。注释不会在浏览器中显示。-->
 <h2 align="center" style="font-family:verdana;color:red;text-align:center">Welcome to My Secret Garden</h2>
-<p align="center"><audio controls="controls" autoplay="autoplay" loop="loop">
+<p align="center"><audio id="audio" controls="controls" autoplay="autoplay" loop="loop">
   <source src="/sources/bgm/Delicate.mp3" type="audio/mpeg">
 </audio></p>
+<script type="text/javascript">
+  var audio = document.getElementById("audio");
+  document.ontouchend = function() {
+  audio.play()
+  }
+</script>
 <a href="/html/private.html">
 <img src="/sources/lion.jpg" width="45" height="45" /></a>
 <a href="http://www.baidu.com" target="_blank">
