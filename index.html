@@ -418,31 +418,26 @@ Address:11F, New Hua Lian Mansion(East), 775 Huai Hai Zhong Road, Shanghai 20002
 <span id="busuanzi_container_site_pv" >总阅读量: <span id="busuanzi_value_page_pv"></span> Times </span>
 <span id="busuanzi_container_site_pv" >  | 总访问量: <span id="busuanzi_value_site_pv"></span> Times </span>
 <span id="busuanzi_container_site_uv" >  | 总访客数: <span id="busuanzi_value_site_uv"></span> Person </span>
+<script src='http://mat1.gtimg.com/libs/jquery/1.12.0/jquery.js'></script>
 <script type="text/javascript">
-/* 鼠标特效 */
-var a_idx = 0;
-jQuery(document).ready(function($) {
-    $("body").click(function(e) {
-        var a = new Array("❤富强❤","❤民主❤","❤文明❤","❤和谐❤","❤自由❤","❤平等❤","❤公正❤","❤法治❤","❤爱国❤","❤敬业❤","❤诚信❤","❤友善❤");
-        var $i = $("<span></span>").text(a[a_idx]);
-        a_idx = (a_idx + 1) % a.length;
-        var x = e.pageX,
-        y = e.pageY;
+/* 鼠标特效 核心价值观 */
+$(document).ready(function(){
+    var a_index = 0;
+    $("body").click(function(e){
+        var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+        var $i = $("<span/>").text(a[a_index]);
+        a_index = (a_index + 1) % a.length;
+        var x = e.pageX,y = e.pageY;
         $i.css({
-            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "z-index": 99999,
             "top": y - 20,
             "left": x,
             "position": "absolute",
             "font-weight": "bold",
-            "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+            "color": "#ff6651"
         });
         $("body").append($i);
-        $i.animate({
-            "top": y - 180,
-            "opacity": 0
-        },
-        1500,
-        function() {
+        $i.animate({"top": y-180,"opacity": 0},1500,function() {
             $i.remove();
         });
     });
