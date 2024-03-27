@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spring of 2024</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<header>
+	<h1>Spring of 2024</h1>
+	</header>
+	
+	<main>
+		<div class="slideshow-container">
+			<div class="slide">
+				<img src="/sources/spring/img1.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img2.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img3.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img4.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img5.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img6.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img7.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img8.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img9.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img10.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img11.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img12.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img13.jpg">
+			</div>
+			<div class="slide">
+				<img src="/sources/spring/img14.jpg">
+			</div>
+		</div>
+	</main>
+	
+	<script src="script.js"></script>	
+	
+</body>
+
+</html>
+
+<style>
+body, h1, p, ul, li {
+margin:0;
+padding:0;
+}
+
+body {
+font-family: Arial, sans-serif;
+background-color: #C7EDCC;
+color: #333;
+}
+
+header {
+background-color: #333;
+padding: 20px;
+text-align: center;
+}
+
+h1 {
+font-size: 24px;
+color: #fff;
+}
+
+main {
+max-width:800px;
+max-height:1067px;
+margin: 0 auto;
+padding: 40px;
+background-color: #fff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-container {
+position: relative;
+width: 100%;
+height: 1067px;
+overflow: hidden;
+}
+
+.slide {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+transition: opacity 1s ease;
+}
+
+.slide.active {
+opacity: 1;
+}
+
+.slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+	const slides = document.querySelectorAll('.slide');
+	let currentSlide = 0;
+	
+	function showSlide(index) {
+	slides.forEach((slide, i) => {
+		if (i == index) {
+			slide.classList.add('active');
+		} else {
+			slide.classList.remove('active');
+		}
+	});
+	}
+	
+	function nextSlide() {
+	currentSlide++;
+	if (currentSlide >= slides.length) {
+		currentSlide = 0;
+	}
+	showSlide(currentSlide);
+	}
+	
+	setInterval(nextSlide, 3000);
+	
+	showSlide(currentSlide);
+	
+});
+
+</script>
